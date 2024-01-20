@@ -3,13 +3,17 @@
 var set_clock = setInterval(function clock() {
 
     var date_now = new Date();
-    var hr = date_now.getHours();
-    var min = date_now.getMinutes();
-    var sec = date_now.getSeconds();
+    var hour_now = date_now.getHours();
+    var min_now = date_now.getMinutes();
+    var sec_now = date_now.getSeconds();
 
-    var calc_hr = hr * 30 + min / 2;
-    var calc_min = min * 6;
-    var calc_sec = sec * 6;
+    // console.log(hour_now, min_now, sec_now)
+
+    var calc_hr = hour_now * 30 + min_now / 2;
+    var calc_min = min_now * 6;
+    var calc_sec = sec_now * 6;
+
+    // console.log(calc_hr, calc_min, calc_sec)
 
     hour.style.transform = "rotate(" + calc_hr + "deg)";
     minute.style.transform = "rotate(" + calc_min + "deg)";
